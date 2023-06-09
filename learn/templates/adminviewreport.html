@@ -1,0 +1,102 @@
+<link rel="stylesheet" type="text/css" href="/static/adminviewrep.css">
+
+<!DOCTYPE html>
+<html lang = "en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <title>admin</title>
+		
+   </head>
+
+
+      <body>
+	  <div class = 'heading'>
+	  
+
+
+        <img src="static\photos\logo.gif" class =  'logogif'>
+        <p class="mainheading">  ABCD HOSPITALS</p>
+<p class = 'subcat'> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'Empowering People to Improve Their Lives'<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Contact No: 01-488515, +977 9856745256</p>
+</div>
+       
+	   
+	   
+	   
+<form action="adminreport" method="POST">
+    {% csrf_token %}
+    <br><br>
+    <input type = 'text' class="subgroup_detail" name ='patid' placeholder="Patient ID"  maxlength='20'>
+
+    <br><br>
+    <div class="btn-box">
+    <button  id="next1" type="submit"  class = "subgroup_but">Enter ID</button> 
+    
+    </div>
+</form>
+
+
+<form  action="loadreportforadmin" method="POST"> 
+    {% csrf_token %}
+    
+<div class = "Displayareport" ><br><br>
+	<div class = "subgroup_detail" style="background-color:white;font-size: larger;">
+    <label for="department"><b>Date::</b></label>
+    &nbsp;&nbsp;
+    
+   <select name="datees" style="height:30px;width:150px;font-size: 20px;" >
+
+    {% for i in dat %}
+    
+    
+     <option value="{{i}}">{{i}}</option>
+
+     {% endfor %}
+
+   </select>
+   </div>
+<br><br>
+
+<br>
+<button  id="next1" type ='submit' class = "subgroup_but">View</button> <br>
+</div>
+</form>
+<div class="patdetail1">
+Name:{{pname}}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Pid:{{pid}}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Phone:{{phone}}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Date:{{date}}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</div>
+
+<table class="iddescriptiontable">
+
+            <tr>
+
+            <th>
+               Tests
+            </th>
+            
+            <th>
+               Values
+            </th>
+            
+            </tr>
+            
+            {% for i in rep %}
+            <tr>
+                {% for j in i %}
+             
+                    <td>
+            {{j}}
+                    </td>
+                    {% endfor %}
+            </tr>
+            {% endfor %}
+            
+            
+            </table>
+   
+    </body>
+
+</html>

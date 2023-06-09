@@ -1,0 +1,80 @@
+
+
+body
+{
+    background-color: rgb(240, 242, 245);
+    background: url("photos/loginback.webp ");
+}
+.company_det
+{
+    
+    
+    height:400px;
+    width: 800px;
+
+}
+.company_name{
+    float: right;
+    margin-right:100px ;
+    font-size: 40px;
+    font-weight: bolder;
+    color:rgb(5, 26, 52);
+
+}
+.login_old{
+    margin-left:550px; 
+    background-color: white;
+    height:400px;
+    width: 450px;
+    border: solid rgb(18, 16, 16) 2px ;
+    border-radius: 15px;
+    margin-top: 100px;
+    margin-right: 200px;
+}
+#email_pw
+{
+    border: solid rgb(12, 11, 11) 2px ;
+    height: 60px;
+    width: 400px;
+    border-radius: 5px;
+}
+
+#pwrd
+{
+    border: solid rgb(12, 11, 11) 2px ;
+    height: 60px;
+    width: 400px;
+    border-radius: 5px;
+}
+.login_but
+{
+    background-color: rgb(44, 199, 183);
+    height:60px;
+    width: 400px;
+    border-radius: 5px;
+    font-size: larger;
+    color: white;
+    font-weight: bolder;
+}
+.login_but:hover
+{
+    background-color: rgb(13, 94, 82);
+    cursor: pointer;
+}
+
+
+.signin_but
+{
+    background-color: rgb(13, 140, 98);
+    height: 60px;
+    width: 230px;
+    border-radius: 5px;
+    font-size: larger;
+    color: white;
+    font-weight: bolder;
+}
+.signin_but:hover
+{
+    background-color: rgb(13, 94, 82);
+    cursor: pointer;
+}

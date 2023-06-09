@@ -1,0 +1,151 @@
+<!--<link rel="stylesheet" type="text/css" href="/static/admin2.css">-->
+
+<link rel="stylesheet" type="text/css" href="/static/report.css">
+
+
+<!DOCTYPE html>
+<html lang = "en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <title>admin</title>
+		
+   </head>
+
+
+      <body>
+	  <div class = 'heading'>
+	  
+
+
+        <img src="static\photos\logo.gif" class =  'logogif'>
+        <p class="mainheading">  ABCD HOSPITALS</p>
+<p class = 'subcat'> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'Empowering People to Improve Their Lives'<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Contact No: 01-488515, +977 9856745256</p>
+</div>
+       
+	   
+	   
+	   
+
+<!--
+<p style = "font-size:25px">
+   
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Name:{{pname}}
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Age:{{page}}
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sex:{{psex}}<br>
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Address:paddress
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Phone:{{phone}}
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Date:{{datee}}
+</p>
+
+-->
+<br><br>
+<div class = 'labreport'>
+
+<div class = 'repheading'>
+
+<p class = "otherdetails">
+Contact No: 01-488515, +977 9856745256 <br>
+Address: Thapathali,Kathmandu,Nepal<br>
+Email:lab@abcdhospital.com.np
+</p>
+
+<img src="static\photos\logo.gif" class =  'logogif'>
+
+<p class = "reporttitle"> ABCD HOSPITAL LAB
+<p class = "motodes"> Catagory 'A' Lab authorized by Ministry Of Health and Population</p>
+
+</p> 
+
+
+</div>
+
+
+<div class="otherpatientdetaillab">
+<b>LAB No:17968865</b><br>
+&nbsp; &nbsp;<img src="static\photos\qrscan.png" height="100px" width="100px"><br><i>scan to view report</i>
+
+</div>
+<div class = "patientdetailsrep">
+
+   <b>Name: </b> &nbsp; &nbsp; &nbsp;&nbsp;{{pname}}   <br>
+   <b>Sex:</b> &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {{psex}} &nbsp; &nbsp; &nbsp;<br>
+   <b>Age:</b> &nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;{{page}} yrs &nbsp; &nbsp; &nbsp;<br>
+   <b>Phone:</b> &nbsp;&nbsp; &nbsp;{{phone}}<br>
+   
+   Date:</b>&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{datee}}
+   
+</b> 
+   
+</div>
+
+<div class="actualreport">
+
+<table class = "actvaluetable" >
+
+    <tr>
+        <th>
+           Test
+        </th>
+        <th>
+            Value
+         </th>
+        </tr>
+        
+        {% for i in report %}
+        <tr>
+            {% for j in i %}
+         
+                <td>
+        {{j}}
+                </td>
+                {% endfor %}
+        </tr>
+        {% endfor %}
+        
+        
+            </table>
+            <br><br>
+			
+<p> <i>&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
+***End of Report ***</i> </p>
+
+</div>
+
+<div class="upfooter">
+
+
+<div class = "docdetail" >
+<img src="static\photos\sign.png" height="100px" width="150px"><br>
+---------------------------<br>
+Dr. Prithivi Bahadur Shah<br> ph.D.(Med Biochemistry)<br>NHPC:68 Med Biochemistry
+ </div>
+
+
+<div class = "barcode">
+
+<img src="static\photos\barcode.jpg" height="100px" width="150px">
+</div>
+
+</div>
+
+<div class = "repfotter">
+<p> <i>'Empowering People to Improve Their Lives'</i></p>
+</div>
+
+</div>
+
+
+
+
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+	
+    </body>
+
+</html>
+    </body>
+
+</html>

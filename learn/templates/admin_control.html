@@ -1,0 +1,374 @@
+<link rel="stylesheet" type="text/css" href="/static/adminn.css">
+<!DOCTYPE html>
+<html lang = "en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <title>admin</title>
+
+   </head>
+      <body>
+	  <div class = 'heading'>
+	  
+
+
+      <img src="static\photos\logo.gif" class =  'logogif'>
+      <p class="mainheading">  ABCD HOSPITALS</p>
+<p class = 'subcat'> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'Empowering People to Improve Their Lives'<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Contact No: 01-488515, +977 9856745256</p>
+</div>
+       
+	   
+	   
+	   
+<p class="pageinto">LOGGED IN TO ADMIN PAGE </p>
+<br><br>
+<div class = "collectionoption">
+    <a href="viewappointments"><div class = "option"><img src="static\photos\appoint.jpg" height="100px" width="100px" class = "imgop"><br>Appointments</div></a>
+				
+  
+                <a href="viewdoctors"><div class = "option" ><img src="static\photos\docter.jpg" height="100px" width="100px" class = "imgop"><br>Doctors</div></a>
+                <a href="viewpatients"> <div class = "option" ><img src="static\photos\patient.jpg" height="100px" width="100px" class = "imgop"><br>Patients</div> </a>
+				<a href="adminreport"><div class = "option"><img src="static\photos\labreport.webp" height="100px" width="100px" class = "imgop"><br>Lab Reports</div></a>
+                <a href="viewshifts" ><div class = "option"><img src="static\photos\shifts.jpg" height="100px" width="100px" class = "imgop"><br>View shifts</div></a>
+                <a href="viewpayment" ><div class = "option"><img src="static\photos\payment.webp" height="100px" width="100px" class = "imgop"><br>View Due Payments</div></a>
+                <a href="viewappnts" ><div class = "option"><img src="static\photos\appo.jpg" height="100px" width="100px" class = "imgop"><br>Appointment details</div></a>
+              </div>
+
+<div class = "Appointment">
+<br>
+<form id= "form1" name="accform" autocomplete="off"   action="add_appointment" method="post">
+     <!-- *************************************ADD appointment ---------------------------------------*-->
+   {% csrf_token %}  
+<p class="topic_subgroup">Add appointment::</p>
+            <br> 
+<input type = 'number' class="subgroup_detail" name ='aid' placeholder="Appointment ID"   autofocus >
+
+<input type = 'Date' class="subgroup_detail" name ='adate'  placeholder = "Date" maxlength='20' >
+<input type = 'number'  name ='did'  placeholder = "Doctor ID"   class="subgroup_detail">
+<br><br>
+<div class="btn-box">
+<button  id="next1" type="submit"  class = "subgroup_but">+ Add</button> <br>
+</div>
+
+
+</form>
+
+
+<!-- *************************************Remove Appointment ---------------------------------------*-->
+	
+	
+	 <form id= "form2" name="accform" autocomplete="off" method="POST" action="removeapp" >
+        {% csrf_token %}
+         <br>
+      <p class="topic_subgroup">Remove Appointment::</p>
+    <br> 
+             
+        <input type = 'number'  name ='app'  placeholder = "Appointment ID" min="0" class="subgroup_detail">
+		
+		<br><br>
+		<button  id="next1" type="submit" class = "subgroup_but">- Remove</button> <br>
+          </form>
+	
+	
+    
+    </div>
+
+</div>
+
+
+<div class = "Edit_Doctors">
+<!-- *************************************Add doctor ---------------------------------------*-->
+    <form id= "form1" name="accform" autocomplete="off" method="post"  action="add_doctor" >
+    {% csrf_token %}
+         
+         <br>
+      <p class="topic_subgroup">Add Doctor::</p>
+    <br> 
+             
+        <input type = 'text'  name ='did'  placeholder = "Doctor ID" maxlength='5' class="subgroup_detail">
+               
+        <br><br>
+        <div class="dep">
+       
+         <div class="depa" style="font-size: 17px;height:35px;">
+       
+          <label for="department"><b>Department:</b></label>
+          
+        <select name="departments" style="height:25px;width:150px;font-size: 17px;border-radius: 5px;">
+          <option value="Physician">Physician</option>
+          <option value="Pediatric">Pediatric</option>
+          <option value="Orthopedic">Orthopedic</option>
+          <option value="ENT">ENT</option>
+          <option value="Dermatology">Dermatology</option>
+          <option value="Oncology">Oncology</option>
+          <option value="Gynaecology">Gynaecology</option>
+          <option value="Dentistry">Dentistry</option>
+          <option value="Physiotherapy">Physiotherapy</option>
+          <option value="Anesthesiology">Anesthesiology</option>
+          <option value="Pathology">Pathology</option>
+          <option value="Psychiatry">Psychiatry</option>
+          <option value="Forensics">Forensics</option>
+        </select>
+    </div>
+    </div>
+        <br>
+        
+
+                
+                
+    <input type = 'text' name ='dfirst_name' placeholder="First name "  maxlength='20' autofocus class="subgroup_detail">
+      
+    <input type = 'text'  name ='dlast_name'  placeholder = "Last name " maxlength='20' class="subgroup_detail">
+    
+    
+  
+    
+    <input type = 'number' min='0' max='120'  name ='dage'  placeholder = "Age"  class="subgroup_detail">
+    <br><br>
+   
+    
+    
+    <div class="genderr">
+    <div class="gender">
+    <input type = 'radio' name = "dgender" value="Other" >
+    Other
+    </div>
+    
+    <div class="gender">
+    <input type = 'radio' name = "dgender" value="Female">
+    
+    Female
+    </div>
+    
+    <div class="gender">
+    <input type = 'radio' name = "dgender" value="Male">
+    Male
+    </div>
+    <br>
+    </div>   
+<br>
+    <input type = 'text'  name ='dexp'  placeholder = "Experience(in years)"  maxlength='20' class="subgroup_detail">
+    
+    <input type = 'text'  name ='dqual'  placeholder = "Qualification"  maxlength='20' class="subgroup_detail">
+    
+    <input type = 'text'  name ='daddress'  placeholder = "Address"  maxlength='20' class="subgroup_detail">
+    
+    <input type = 'int'  name ='dphone'  placeholder = "Phone " min="9800000000" max="9899999999" class="subgroup_detail">
+    <br><br>
+    <input type = 'email'  name ='demail'  placeholder = "Email" class="subgroup_detail">
+    <br>
+    <br>
+    
+    
+    
+    <div class="btn-box">
+    <button  id="next1" type="submit" class = "subgroup_but">+ Add</button> <br>
+    </div>
+    
+
+    </form>
+	
+	
+	<!-- *************************************Remove doctor ---------------------------------------*-->
+	
+	
+	 <form id= "form2" name="accform" autocomplete="off" method="post"  action="removedoctor" >
+        
+         {% csrf_token %}
+         <br>
+      <p class="topic_subgroup">Remove Doctor::</p>
+    <br> 
+             
+        <input type = 'text'  name ='rdid'  placeholder = "Doctor ID" maxlength='10' class="subgroup_detail">
+		<input type = 'text'  name ='rdlast_name'  placeholder = "Last name " maxlength='20' class="subgroup_detail">
+		<br><br>
+		<button  id="next1" type="submit" class = "subgroup_but">- Remove</button> <br>
+          </form>
+		  
+	
+	<!-- *************************************Edit doctor ---------------------------------------*-->
+	
+	
+	<form id= "form3"  autocomplete="off" method="post"  action="editdoct" >
+        
+ {% csrf_token %}  
+ <br>
+
+      <p class="topic_subgroup">Edit Doctor's Info::</p>
+    <br> 
+    <input type = 'text'  name ='docid'  placeholder = "Doctor ID" class="subgroup_detail">
+  
+<input type = 'text'  name ='updatewith'  placeholder = "Edit with"  class="subgroup_detail">
+
+<div class="dep">
+      <label for="Days">Update:</label>
+  
+<div class="depa" style="font-size: 15px;border-radius: 5px;">
+ 
+      <select name="updateinfo" style="height:25px;width:150px;font-size: 15px;border-radius: 5px;">
+       
+        <option value="dexp">Experience</option>
+        <option value="daddress">Address</option>
+        <option value="dqual">Qualification</option>
+        <option value="dphn">Phone</option>
+        <option value="demail">Email</option>
+
+      </select>
+  </div>
+</div>
+
+	
+    <br><br>
+
+		<br><br>
+	<button  id="next1" type="submit" class = "subgroup_but">Edit</button> <br>
+          </form>	  
+		  
+    </div>
+
+
+<div class = "patient">
+<!-- *************************************Remove patient ---------------------------------------*-->
+	
+	
+	 <form id= "form2" name="accform" autocomplete="off" method="post"  action="removepatient" >
+        
+ {% csrf_token %}  
+ <br>
+      <p class="topic_subgroup">Remove Patient::</p>
+    <br> 
+             
+        <input type = 'text'  name ='rpid'  placeholder = "Patient ID" maxlength='10' class="subgroup_detail">
+		<input type = 'text'  name ='rplast_name'  placeholder = "Last name " maxlength='20' class="subgroup_detail">
+		<br><br>
+		<button  id="next1" type="submit" class = "subgroup_but">- Remove</button> <br>
+          </form>
+		  
+	
+
+</div>
+
+
+
+
+
+<div class = "patient">
+    <!-- *************************************Remove patient ---------------------------------------*-->
+
+         <form id= "form2" name="accform" autocomplete="off" method="post"  action="addshift" >
+            
+     {% csrf_token %}  
+     <br>
+          <p class="topic_subgroup">Add doctor's shift::</p>
+        <br> 
+                 
+
+            <input type = 'number'  name ='didshift'  placeholder = "Doctor ID " min="0" class="subgroup_detail">
+ 
+            <div class="dep">
+                <label for="Days">Day:</label>
+        <div class="depa">
+                <select name="shiftday" style="height:25px;width:150px;font-size: 15px;border-radius: 5px;">
+                  <option value="Sunday">Sunday</option>
+                  <option value="Monday">Monday</option>
+                  <option value="Tuesday">Tuesday</option>
+                  <option value="Wednesday">Wednesday</option>
+                  <option value="Thursday">Thursday</option>
+                  <option value="Friday">Friday</option>
+                  <option value="Saturday">Saturday</option>
+    
+                </select>
+            </div>
+            </div>
+            <input type = 'time'  name ='fromtime'  placeholder = "From " class="subgroup_detail">
+            <input type = 'time'  name ='totime'  placeholder = "To "  class="subgroup_detail">
+            <br><br>
+            <button  id="next1" type="submit" class = "subgroup_but">+Add</button> <br>
+              </form>
+              
+        
+    
+    </div>
+
+
+
+    <div class = "patient">
+        <!-- *************************************Remove shift---------------------------------------*-->
+    
+             <form id= "form2" name="accform" autocomplete="off" method="post"  action="removeshift" >
+                
+         {% csrf_token %}  
+         <br>
+              <p class="topic_subgroup">Delete doctor's shift::</p>
+            <br> 
+                     
+
+                <input type = 'number'  name ='didshift'  placeholder = "Doctor ID "  class="subgroup_detail">
+               
+                <div class="dep">
+                    <label for="department">Day:</label>
+            <div class="depa">  
+                    <select name="shiftday" style="height:25px;width:150px;font-size: 15px;border-radius: 5px;">
+                      <option value="Sunday">Sunday</option>
+                      <option value="Monday">Monday</option>
+                      <option value="Tuesday">Tuesday</option>
+                      <option value="Wednesday">Wednesday</option>
+                      <option value="Thursday">Thursday</option>
+                      <option value="Friday">Friday</option>
+                      <option value="Saturday">Saturday</option>
+        
+                    </select>
+                </div>
+                </div>
+                <br><br>
+                <button  id="next1" type="submit" class = "subgroup_but">Delete</button> <br>
+                  </form>
+                  
+            
+        
+        </div>
+<div class = "lab">
+
+  <form  autocomplete="off" method="post"  action="insertrep" >
+        
+    {% csrf_token %}  
+    <br>
+         <p class="topic_subgroup">Add Report::</p>
+       <br> 
+                
+        <input type = 'number'  name ='rpid'  placeholder = "Patient ID" class="subgroup_detail">
+     
+       <br><br>
+       
+       <button  id="next1" type="submit" class = "subgroup_but">+Add</button> <br>
+             </form>
+</div>
+
+<div class = "lab">
+
+  <form  autocomplete="off" method="post"  action="addbill" >
+        
+    {% csrf_token %}  
+    <br>
+         <p class="topic_subgroup">Add Bill::</p>
+       <br> 
+       <input type = 'number'  name ="pid"  placeholder = "Patient ID" min="0" class="subgroup_detail">
+       <br><br><br>OPD cost:
+        <input type = 'number' value="750" name ="Opd_cost"  placeholder = "Opd_cost" min="0" class="subgroup_detail">
+        Lab Cost:
+        <input type = 'number'  value="000" name ="Lab_Cost"  placeholder = "Lab_Cost" min="0" class="subgroup_detail">
+        Medicine Cost:
+        <input type = 'number' value="0" name ="Medicine_Cost"  placeholder = "Medicine_Cost" min="0" class="subgroup_detail">
+        Miscellaneous Cost:
+        <input type = 'number' value="0"  name ="Miscellaneous_Cost"  placeholder = "Miscellaneous_Cost" min="0" class="subgroup_detail">
+       <br><br>
+       
+       <button  id="next1" type="submit" class = "subgroup_but">+Add</button> <br>
+             </form>
+</div>
+</body>
+	   
+</html>  
+
+    

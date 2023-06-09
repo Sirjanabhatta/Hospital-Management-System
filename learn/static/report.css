@@ -1,0 +1,310 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+a{
+	text-decoration:none;
+}
+
+body
+{
+margin:2px;
+border:solid 2px black;
+background-color:#f4fafd;
+	
+}
+
+/*---------------------------------------------------Heading section ------------------------------------------------------------*/
+
+.logogif
+{
+float: left;
+	
+height:105px;
+	
+}
+
+
+.heading
+{
+	border:solid 2px black;
+	height:110px;
+	padding-left:30%;
+	background-color:#f4fafd;
+	
+	
+	
+}
+
+/*  hospitalname*/
+.mainheading{
+	font-size:45px;
+	font-weight:bolder;
+	color:maroon;
+	
+}
+.subcat
+{
+	color:maroon;
+}
+	
+
+
+/*-----------------------------------------------------------------------
+*/
+
+
+	
+/*---------------------------option section -------------------------------------------------------------*/	
+.collectionoption
+{
+	text-align:center;
+	height:150px;
+	
+
+}
+.imgop
+{
+	border:solid 1px black;
+	border-radius:50%;
+}
+
+.option
+
+{
+float:left;
+margin-left:120px;
+text-align:center;
+font-size:20px;
+color:blue;
+cursor:pointer;
+}
+
+.option:hover
+
+{
+	text-decoration:underline;
+	
+}
+
+.Appointment,.accountt,.Edit_Doctors,.patient,.lab
+{
+	border:solid 2px black;
+	margin:5px;
+	width:98%;
+	padding-bottom:20px;
+	background-color:white;
+	border-radius:5px;
+}
+
+
+
+.subgroup_detail
+{
+	 border:solid 2px black;
+	 border-radius:10px;
+	 margin-left:30px;
+	 height:40px;
+	 width:240px;
+	 font-size:15px;
+	 padding-left:5px;
+}
+
+.subgroup_detail:hover
+{
+		border:solid 2px blue;
+}
+
+.topic_subgroup
+{
+	
+		margin-top:5px;
+	padding-left:30px;
+	font-size:20px;
+	background-color:#f2dede;
+	font-weight:bolder;
+	color:maroon;
+	
+}
+
+.subgroup_but
+
+{
+	width:85px;
+	 height:30px;
+	 margin-left:3%;
+	 font-size:15px;
+	 font-weight:bolder;
+	 border:solid 2px black;
+	 border-radius:1px;
+	 cursor:pointer;
+	 background-color:green;
+	 color:white;
+}
+
+.genderr
+
+{
+	
+	width:100%;
+	height:50px;
+	
+}
+.gender
+{
+	
+	float:left;
+	
+	 border:solid 2px black;
+	 border-radius:10px;
+	 margin-left:30px;
+	 
+	 width:80px;
+	 font-size:15px;
+	 padding:10px;
+	
+}
+
+.gender:hover{
+	border:solid 2px blue;
+
+}
+
+
+
+ /* ------------------------------------------- REPORT OF LAB ---------------------------------------- */
+ 
+ .labreport
+ 
+ {
+	 
+	 background-color:white;
+	 color:black;
+	 margin-left:10%;
+	 margin-right:10%;
+	 border:solid 0.8px black;
+	 
+	 
+	 
+ }
+ 
+ .repheading
+ {
+	 background-color:#b4d3ef; 
+	 height:80px;
+	 padding-left:5%;
+	 
+	 
+	 
+ }
+ 
+ .replogogif
+{
+float: left;
+	
+height:30px;
+
+	
+}
+.reporttitle
+{
+	color:#e12528;
+	font-size:50px;
+	font-family:Times, serif;
+	
+}
+.otherdetails
+{
+	float:right;
+	margin-top:5px;
+	color:#49428c;
+	margin-right:2px;
+	
+}
+
+.motodes
+{
+	font-style:italic;
+	color:#d33832;
+}
+
+.patientdetailsrep{
+	
+	font-size:20px;
+	margin-left:35px;
+	margin-top:25px;
+	margin-bottom:2px;
+	line-height: 1.3;
+	
+}
+.otherpatientdetaillab
+{
+	float:right;
+	margin-right:10px;
+	
+}
+
+
+
+
+.actualreport
+{
+	border-top:solid 2px black;
+	margin-bottom:150px;
+}
+.actvaluetable
+{
+	margin-left:2%;
+	margin-top:10px;
+	
+}
+
+
+tr{
+	
+	height:45px;
+	
+	
+}
+	
+th
+{
+	
+	font-size:22px;
+	width:155px;
+	text-align:left;
+	
+	
+	
+}
+td
+{
+	
+	font-size:18px;
+	width:155px;
+	
+	
+}
+.upfooter
+
+{
+	height:200px;
+}
+
+.repfotter
+{
+height:45px;	
+background-color:#b4d3ef;
+text-align:center;
+color:maroon;
+padding:5px;
+}
+
+
+
+.docdetail
+{
+	float:right;
+	padding:10px;
+	
+}

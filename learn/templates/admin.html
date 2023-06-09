@@ -1,0 +1,28 @@
+<link rel="stylesheet" type="text/css" href="static\adminlog.css">
+<html>
+
+ <body> 
+
+
+<div class="admin_login">
+<p class="logtop">ADMIN LOGIN</p> 
+    <form id="accountform"  autocomplete="off"  method="POST">
+        {% csrf_token %}  
+          
+            
+			
+        <input type = 'name' class="emaill" autocomplete="off" name="admin_name"  placeholder = "Username" autofocus>
+        <br><br>
+		
+        <input type = 'password' class = "pwd" name="admin_password" placeholder = "Password">
+        <br><br>
+        
+        <button  type="submit" class = "subbutton">Login</button> <br>
+        
+        </form>
+		<br>
+		<p class="authonly"> !!! Authorized Person Only!!!</p>
+</div>
+
+</body>
+</html>

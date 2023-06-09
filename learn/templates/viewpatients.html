@@ -1,0 +1,89 @@
+<link rel="stylesheet" type="text/css" href="/static/admin2.css">
+<!DOCTYPE html>
+<html lang = "en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <title>admin</title>
+		
+   </head>
+
+
+      <body>
+	  <div class = 'heading'>
+	  
+
+
+        <img src="static\photos\logo.gif" class =  'logogif'>
+        <p class="mainheading">  ABCD HOSPITALS</p>
+<p class = 'subcat'> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'Empowering People to Improve Their Lives'<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Contact No: 01-488515, +977 9856745256</p>
+</div>
+       
+	   
+	   
+	   
+<p class="pageinto" >Here are your patients </p>
+<br><br>
+
+<table>
+
+<tr>
+<th>
+        PID
+</th>
+<th>
+   Name
+</th>
+
+<th>
+    Sex
+</th>
+<th>
+    Age
+</th>
+<th>
+   Address
+</th>
+<th>
+    Email
+</th>
+<th>
+   Phone
+</th>
+</tr>
+
+{% for i in patient_info %}
+<tr>
+
+    {% for j in i %}
+   
+        <td>
+            {{j}}
+        </td>
+
+{% endfor %}
+
+</tr>
+{% endfor %}
+</table>
+
+
+</p>
+
+
+
+
+
+
+
+
+
+       </body>
+	   
+	   
+
+
+</html>  
+
+    

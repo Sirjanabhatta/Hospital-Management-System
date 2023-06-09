@@ -1,0 +1,63 @@
+<link rel="stylesheet" type="text/css" href="/static/register.css">
+
+<html>
+{% block title %}
+
+ {% endblock title %}
+<body>
+
+<div class = "register">
+
+<form id= "form1" name="accform" autocomplete="off"   action="register" method="post">
+    {% csrf_token %}  
+  <p class="signn">Sign Up</p>
+            <br> 
+<input type = 'text' class = "Pat_info" name ='first_name' placeholder="First name "  maxlength='20' autofocus >
+<br><br>
+<input type = 'text' class = "Pat_info" name ='last_name'  placeholder = "Last name " maxlength='20' >
+<br>
+
+&nbsp;
+
+<input type = 'number' min='0' max='120' class = "Pat_info" name ='age'  placeholder = "Age"  >
+<br><br>
+&nbsp;
+Gender:
+
+<div class="genderr">
+<div class="gender">
+<input type = 'radio' name = "gender" value="Custom" >
+Custom
+</div>
+
+<div class="gender">
+<input type = 'radio' name = "gender" value="Female">
+
+Female
+</div>
+
+<div class="gender">
+<input type = 'radio' name = "gender" value="Male">
+Male
+</div>
+<br>
+</div>   
+<br>
+<br><br><br>
+<input type = 'text' class = "Pat_info" name ='address'  placeholder = "Address"  maxlength='20'>
+<br><br>
+<input type = 'int' class = "Pat_info" name ='phone'  placeholder = "Phone " min="9800000000" max="9899999999">
+<br>
+<br>
+<input type = 'email' class = "Pat_info" name ='email'  placeholder = "Email ">
+<br>
+<br>
+
+
+
+<div class="btn-box">
+<button  id="next1" type="submit"  onclick="return pat_info_check">Register</button> <br>
+</div>
+
+
+</form>

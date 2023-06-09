@@ -1,0 +1,26 @@
+<link rel="stylesheet" type="text/css" href="/static/loginp.css">
+
+<html>
+
+<div class = "login_old">
+
+<form id="accountform" name="accform" autocomplete="off" action="patient_login" method="POST">
+{% csrf_token %}
+<center>   
+    <br><br> 
+<input type = 'name' id="email_pw" autocomplete="on" name="last_name" class = "email" placeholder = "Enter your last name" autofocus>
+<br><br>
+<input type = 'text' id="pwrd" class = "pw" name="id" placeholder = "Enter Patient Id here">
+<br><br>
+
+<button class = "login_but" name="loginn" type="submit"  >Log In</button> <br>
+</center>
+</form>
+
+<center>
+<a href="register">
+<button class = "signin_but"> Register </button><br>
+</a>
+</center>
+</div> 
+</html>

@@ -1,0 +1,276 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+body
+{
+margin:2px;
+
+
+}
+
+/*---------------------------------------------------Heading section ------------------------------------------------------------*/
+.ambulance
+{
+	float:right;
+	height:97px;
+	margin-right:5px;
+	border:solid 2px black;
+	text-align:center;
+	color:white;
+	background:maroon;
+	margin-top:5px;
+	border-radius:5px;
+	font-size:20px;
+	
+	
+}
+.ambgif
+{
+	height:50px;
+}
+
+.logogif
+{
+float: left;
+	
+height:105px;
+	
+}
+
+
+.heading
+{
+	border:solid 2px black;
+	height:110px;
+	padding-left:25%;
+	background-color:#f4fafd;
+	
+	
+	
+}
+
+/*  hospitalname*/
+.mainheading{
+	font-size:45px;
+	font-weight:bolder;
+	color:maroon;
+	
+}
+.subcat
+{
+	color:maroon;
+}
+	
+
+/* ---------------------------------------------- navigation bar section ---------------------------------------------------------*/
+.navbar
+{
+	
+border-bottom:solid 2px black;	
+border-right:solid 2px black;
+border-left:solid 2px black;
+height:50px;
+background:rgb(41, 151, 224);
+color:gold;
+}
+
+
+
+.nav_word
+{
+	padding-top:10px;
+	text-align:center;
+	float:left;
+	height:40px;
+	width:150px;
+	border-right:solid 2px black;	
+	font-size:27px;
+	font-weight:bolder;
+}
+
+
+.nav_word:hover
+{
+background:gold;
+color:maroon;	
+cursor:pointer;
+	
+}
+
+/*#search {
+    padding: 8px;
+    font-size: 14px;
+    border: 3px solid navy;
+    border-radius: 10px;
+    background: none;
+    cursor: pointer;
+}*/
+
+.listtext:hover{
+	
+	font-size:30px;
+}
+.background {
+    background: url("photos/doc.jpg ");
+    background-size: cover;
+    background-blend-mode: lighten;
+	
+}
+
+.firstsection {
+    height: 130vh;
+	font-size:25px;
+}
+
+
+
+.boxmain {
+    max-width: 80%;
+    height: 25%;
+    display: flex;
+    align-items: flex-end;
+    color: navy;
+    margin: auto;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.secondhalf {
+    width: 50%;
+    height: 90px;
+    display: flex;
+    flex-direction: column;
+    justify-content: right;
+    position: absolute;
+    left: 25%;
+}
+
+.text-big {
+    font-size: 60px;
+}
+
+.text-small {
+    font-size: 50px;
+}
+
+.firsthalf {
+    width: 30%;
+    height: 100px;
+    justify-content: left;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    left: 4%;
+    text-decoration: none;
+	
+}
+
+.firsthalf:hover
+{
+	color:red;
+}
+
+.firsthalf li a img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.secondsection {
+    height: 100vh;
+}
+
+.fhalf {
+    max-width: 80%;
+    height: 50%;
+    display: flex;
+    align-items: flex-end;
+    color: navy;
+    margin: auto;
+    position: absolute;
+    left: 4%;
+    /*display: flex;
+    align-items: flex-start;
+    flex-direction: row;
+    justify-content: flex-start;*/
+}
+
+.text {
+    width: 80%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: right;
+}
+
+.sectiontag {
+    font-size: 40px;
+}
+
+.sectionsubtag {
+    font-size: 25px;
+}
+
+
+/*.thumbnail {
+    width: 50%;
+    height: 90px;
+    display: flex;
+    flex-direction: column;
+    justify-content: right;
+}*/
+
+.thumbnail img {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 500px;
+    height: 300px;
+    border-radius: 10px;
+}
+
+.contact {
+    background-color: rgb(197, 226, 243);
+    height: 8vh;
+    font-size: 19px;
+    border: 2px navy;
+    border-radius: 6px;
+}
+
+.imgatbody{
+	
+	height:300px;
+	width:400px;
+	border-radius:10px;
+}
+
+.nav_login
+{
+	padding-top:10px;
+	text-align:center;
+	float:right;
+	height:40px;
+	width:150px;
+	border-left:solid 2px black;	
+	font-size:27px;
+	font-weight:bolder;
+	background-color:gold;
+	color:maroon;
+	margin-right:2px;
+	
+}
+
+
+.nav_login:hover
+{
+text-decoration:underline;
+color:black;	
+cursor:pointer;
+	
+}

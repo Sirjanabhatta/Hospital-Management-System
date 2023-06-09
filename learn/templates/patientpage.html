@@ -1,0 +1,165 @@
+<link rel="stylesheet" type="text/css" href="/static/patientpage.css">
+<!DOCTYPE html>
+<html lang = "en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <title> ABCD HOSPITALS </title>
+   </head>
+
+
+      <body>
+	  <div class = 'heading'>
+	  
+<div class =  'ambulance' >
+<img src="static\photos\amb.gif" class = "ambgif">
+<br>
+Call Ambulance<br>+977 9845634516
+</div>	  
+
+
+<img src="static\photos\logo.gif" class =  'logogif'>
+                      <p class="mainheading">  ABCD HOSPITALS</p>
+<p class = 'subcat'> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'Empowering People to Improve Their Lives'<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Contact No: 01-488515, +977 9856745256</p>
+</div>
+	  
+	  
+	   
+<p class="pageinto">PATIENT LOG IN PAGE </p>	<br>  
+
+<p class = "PatientDetail"> 
+	&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+PID:{{pid}}
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+NAME: {{pname}} &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+AGE:{{page}} &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+SEX:{{psex}}&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<br><br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+ADDRESS:{{paddress}}&nbsp;
+&nbsp;  &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+GMAIL:{{pemail}}&nbsp; &nbsp;
+&nbsp;  &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+PHONE:{{pphn}} &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+<a href="viewyourapp">
+<button class="app" font-size="16px">
+	View your appointments
+</button>
+
+
+
+</a>
+<a href="logout">
+	<button >Log Out</button>
+</a>
+</p>
+
+
+
+<div class = "takeappointment">
+<form  method="POST"  action="setappointments"> 
+{% csrf_token %}
+<p class="topic_subgroup">Set appointment::</p>
+            <br> 
+
+			
+			<div class="subgroup_detail">
+			<div class="dep">
+				<label for="department"><b>Department:</b></label>
+				 <div class="depa">
+				<select name="departments" >
+				  <option value="Physician">Physician</option>
+				  <option value="Pediatric">Pediatric</option>
+				  <option value="Orthopedic">Orthopedic</option>
+				  <option value="ENT">ENT</option>
+				  <option value="Dermatology">Dermatology</option>
+				  <option value="Oncology">Oncology</option>
+				  <option value="Gynaecology">Gynaecology</option>
+				  <option value="Dentistry">Dentistry</option>
+				  <option value="Physiotherapy">Physiotherapy</option>
+				  <option value="Anesthesiology">Anesthesiology</option>
+				  <option value="Pathology">Pathology</option>
+				  <option value="Psychiatry">Psychiatry</option>
+				  <option value="Forensics">Forensics</option>
+				</select>
+			</div>
+			</div>
+</div><br><br>
+&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<b> Appointment Date:</b><br>
+<input type = 'Date' class="subgroup_detail" name ='takeadate'  placeholder = "Date" >
+   
+    <button  id="next1" type="submit" name="searchapp" class = "subgroup_but" >Search</button> <br>
+    
+	</form>
+
+
+
+	
+	
+</div>
+
+
+<!-- LAB REPORT_____________________-->
+
+
+<div class = "takeappointment">
+<p class="topic_subgroup">View Report::</p>
+
+<form action="viewrep" method="POST">
+	{% csrf_token %}
+	<br>
+	<div class="subgroup_detail">
+		<div class="dep">
+			<label for="department"><b>Date:</b></label>
+			 <div class="depa">
+			<select name="datee" >
+				{% for i in dates %}
+		
+		
+				<option value="{{i}}">{{i}}</option>
+		   
+				{% endfor %}
+
+			</select>
+		</div>
+		</div>
+</div><br><br>
+
+
+	<button  id="next1" type ='submit' class = "subgroup_but">View</button> <br>
+	
+</form>
+	
+</div>
+
+
+
+ 
+<div class = "makepayment">
+<p class="topic_subgroup">Make Payment::</p>
+<br>
+&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; DUE PAYMENT:
+<br>
+            
+			<input type = 'text' class="subgroup_detail" name ='takeadate'  value='RS.{{total}}' maxlength='20' disabled>
+			
+			<br><br>
+
+  <form action="viewyourbill" method="post"> 
+	{% csrf_token %}
+    <button  id="next1" type="submit" class = "subgroup_but" >Pay</button> <br>
+    </form>
+
+
+	</div>
+</div>
+
+
+</body>
+</html>	  

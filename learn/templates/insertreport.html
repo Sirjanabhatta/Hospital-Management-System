@@ -1,0 +1,81 @@
+<link rel="stylesheet" type="text/css" href="/static/viewappnnn.css">
+
+<!DOCTYPE html>
+<html lang = "en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <title>admin</title>
+		
+   </head>
+
+
+      <body>
+	  <div class = 'heading'>
+	  
+
+
+        <img src="static\photos\logo.gif" class =  'logogif'>
+        <p class="mainheading">  ABCD HOSPITALS</p>
+<p class = 'subcat'> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'Empowering People to Improve Their Lives'<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Contact No: 01-488515, +977 9856745256</p>
+</div>
+       
+	   
+	   
+	   
+<p class="pageinto" >Hey admin you can insert your patient's report here: </p>
+<br><br>
+<div class="patdetailll">
+Pid::{{pid}}
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Name:{{pname}}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Pid:{{pid}}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Phone:{{phone}}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</div>
+<form id= "form1" name="accform" autocomplete="off"   action="inserttests" method="post">
+    {% csrf_token %}
+<p class="topic_subgroup">Add report::</p><br> 
+
+<input type = 'text' required class="subgroup_detail" name ='test' placeholder="Test"  maxlength='20'>
+<input type = 'text' required class="subgroup_detail" name ='value' placeholder="Value"  maxlength='20'>
+<br><br>
+<div class="btn-box">
+<button  id="next1" type="submit"  class = "subgroup_but">+ Add</button> 
+
+</div>
+
+
+</form>
+
+<table class="iddescriptiontable">
+
+            <tr>
+
+            <th>
+               Tests
+            </th>
+            
+            <th>
+               Values
+            </th>
+            
+            </tr>
+            
+            {% for i in tests %}
+            <tr>
+                {% for j in i %}
+             
+                    <td>
+            {{j}}
+                    </td>
+                    {% endfor %}
+            </tr>
+            {% endfor %}
+            
+            
+            </table>
+            
+    </body>
+
+</html>

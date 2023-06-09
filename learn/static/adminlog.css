@@ -1,0 +1,73 @@
+
+body
+
+{
+	background: url("photos/backgnd5.jpg ");
+	background-size: cover;
+    background-blend-mode: lighten;
+}
+
+
+.logtop
+
+{
+color:maroon;
+font-size:22px;
+font-weight:bolder;
+text-align:center;
+background-color:#f2dede;
+height:30px;
+padding-top:5px;
+}	
+ 
+ .admin_login
+ {
+	 background-color:white;
+	 
+	 
+	 border:solid 2px black;
+	 border-radius:15px;
+	 width:300px;
+	 height:320px;
+	 margin-left:40%;
+	 margin-top:10%;
+ }
+ 
+ .emaill,.pwd
+ {
+	 border:solid 2px black;
+	 border-radius:10px;
+	 margin-left:30px;
+	 height:40px;
+	 width:240px;
+	 
+ }
+ .emaill:hover,.pwd:hover
+  {
+	  border:solid 2px blue;
+  }  
+ 
+ .subbutton
+ {
+	 width:85px;
+	 height:30px;
+	 margin-left:34%;
+	 font-size:15px;
+	 font-weight:bolder;
+	 border:solid 2px black;
+	 border-radius:1px;
+	 cursor:pointer;
+	 background-color:green;
+	 color:white;
+ }	 
+ 
+  
+  
+  .authonly{
+	  background-color:#f2dede;
+	  color:red;
+	  text-align:center;
+	  
+  }
+  
+ 
